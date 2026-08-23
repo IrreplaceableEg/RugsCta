@@ -1,0 +1,264 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+    --bg:#f8f4ee;
+    --text:#222;
+    --gold:#c5a045;
+    --black:#1b1b1b;
+    --white:#fff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#efefef;
+   font-family:'Playfair Display',serif;
+}
+
+.cta-card{
+    position:relative;
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    /* max-width:1300px; */
+    /* margin:60px auto; */
+
+    background:linear-gradient(
+        90deg,
+        rgba(248,244,238,.98) 0%,
+        rgba(248,244,238,.94) 35%,
+        rgba(248,244,238,.75) 55%,
+        rgba(248,244,238,.25) 75%,
+        transparent 100%
+    );
+
+    /* border-radius:25px; */
+    box-shadow:0 20px 60px rgba(0,0,0,.12);
+    /* min-height:520px; */
+    min-height:350px;
+}
+
+/* Decorative circles */
+
+.cta-card::before{
+    content:"";
+    position:absolute;
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    background:rgba(197,160,69,.08);
+    top:-100px;
+    left:-80px;
+}
+
+.cta-card::after{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:rgba(197,160,69,.06);
+    bottom:-70px;
+    right:25%;
+}
+
+.content-panel{
+    width:55%;
+    /* padding:70px; */
+    position:relative;
+    z-index:2;
+    padding-right: 44px;
+    padding-left: 44px;
+}
+
+.badge{
+    display:inline-block;
+    background:#1b1b1b;
+    color:#fff;
+    padding:8px 18px;
+    border-radius:50px;
+    letter-spacing:2px;
+    font-size:12px;
+    margin-bottom:25px;
+}
+
+.content-panel h1{
+    font-size:58px;
+    line-height:1.1;
+    color:#222;
+  font-family:'Playfair Display',serif;
+    margin-bottom:25px;
+}
+
+.content-panel h1 span{
+    color:#e50e89;
+}
+
+.content-panel p{
+    font-size:18px;
+    color:#666;
+    line-height:1.8;
+    max-width:520px;
+    margin-bottom:35px;
+}
+
+.buttons{
+    display:flex;
+    gap:18px;
+}
+
+.btn{
+    padding:10px 15px;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:600;
+    transition:.35s;
+}
+
+.black{
+    background:#1b1b1b;
+    color:#fff;
+}
+
+.black:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
+}
+
+.gold{
+    background:#c5a045;
+    color:#fff;
+}
+
+.gold:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 30px rgba(197,160,69,.35);
+}
+
+.image-panel{
+    width:45%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+
+/* Gold glow */
+
+.image-panel::before{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    background:radial-gradient(circle,
+        rgba(197,160,69,.25),
+        transparent 70%);
+}
+
+/* Rug Image */
+
+.image-panel img{
+    /* width:95%; */
+    position:relative;
+    z-index:2;
+
+    filter:drop-shadow(0 40px 40px rgba(0,0,0,.25));
+
+    animation:float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-18px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+@media(max-width:900px){
+
+.cta-card{
+    flex-direction:column;
+    text-align:center;
+    padding:30px;
+}
+
+.content-panel,
+.image-panel{
+    width:100%;
+    padding:40px 20px;
+}
+
+.content-panel h1{
+    font-size:42px;
+}
+
+.buttons{
+    justify-content:center;
+}
+
+.image-panel{
+    min-height:350px;
+}
+
+}
+    </style>
+</head>
+<body>
+
+    <main class="cta-card">
+
+    <section class="content-panel">
+
+        <!-- <div class="badge">
+            PREMIUM COLLECTION
+        </div> -->
+
+        <h1>
+            Bring <span>Luxury</span><br>
+            To Every Home
+        </h1>
+
+        <p>
+            Discover handcrafted rugs that combine timeless artistry with
+            modern elegance. Elevate your living spaces with luxurious textures
+           
+        </p>
+
+        <div class="buttons">
+            <!-- <a href="#" class="btn black">Book a Consultation</a> -->
+            <a href="#" class="btn gold">Book a Consultation</a>
+        </div>
+
+    </section>
+
+    <div class="image-panel">
+        <img src="./Images/Gemini_Generated_Image3-removebg-preview.png" alt="Luxury Rug">
+    </div>
+
+</main>
+    
+</body>
+</html>
