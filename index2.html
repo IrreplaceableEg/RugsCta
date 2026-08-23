@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Luxury Rugs CTA</title>
+ <style>
+   /* ===========================
+   GOOGLE FONT
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    /* font-family:'Inter',sans-serif; */
+        font-family: "Playfair Display, serif" !important;
+    
+    color:#222;
+    overflow-x:hidden;
+}
+
+/* ===========================
+   CTA SECTION
+=========================== */
+
+.cta{
+    /* min-height:100vh; */
+    /* min-height: 50vh; */
+    display:flex;
+    align-items:center;
+    background:#f8f5f0;
+    /* padding:80px 8%; */
+     padding-top: 1rem;
+}
+
+.container{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+/* ===========================
+LEFT
+=========================== */
+
+.tag{
+
+display:inline-flex;
+align-items:center;
+gap:12px;
+
+background:#9b6234;
+color:white;
+
+padding:12px 22px;
+
+border-radius:50px;
+
+font-size:.9rem;
+font-weight:600;
+
+margin-bottom:25px;
+
+letter-spacing:.5px;
+
+}
+
+.content h1{
+
+/* font-family:'Playfair Display',serif; */
+    font-family: "Playfair Display, serif" !important;
+
+font-size:clamp(3rem,6vw,4rem);
+
+line-height:1.08;
+
+margin-bottom:25px;
+
+font-weight:700;
+
+}
+
+.content h1 span{
+
+color:#e50e89;
+
+}
+
+.line{
+
+width:90px;
+height:2px;
+background:#D4AF37;
+margin:25px 0;
+
+}
+
+.content p{
+
+max-width:500px;
+
+font-size:1.3rem;
+
+line-height:1.9;
+
+color:#666;
+
+margin-bottom:40px;
+
+}
+
+/* ===========================
+BUTTONS
+=========================== */
+
+.buttons{
+
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:10px 15px;
+
+border-radius:12px;
+
+font-weight:600;
+
+text-decoration:none;
+
+transition:.35s;
+font-size: 1rem;
+
+cursor:pointer;
+
+}
+
+.primary{
+
+background:#9b6234;
+color:#fff;
+
+box-shadow:0 18px 30px rgba(155,98,52,.25);
+
+}
+
+.primary:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 22px 40px rgba(155,98,52,.35);
+
+}
+
+.secondary{
+
+background:white;
+
+color:#D4AF37;
+
+border:2px solid #D4AF37;
+
+}
+
+.secondary:hover{
+
+background:#D4AF37;
+
+color:white;
+
+}
+
+/* ===========================
+FEATURES
+=========================== */
+/* 
+.features{
+
+display:flex;
+
+gap:40px;
+
+margin-top:60px;
+
+flex-wrap:wrap;
+
+} */
+/* 
+.feature{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:10px;
+
+font-size:.95rem;
+
+font-weight:600;
+
+color:#333;
+
+} */
+
+/* .feature svg{
+
+width:42px;
+
+height:42px;
+
+stroke:#9b6234;
+
+} */
+
+/* ===========================
+RIGHT
+=========================== */
+
+.gallery{
+
+position:relative;
+
+/* height:650px; */
+/* height: 500px; */
+
+display:flex;
+
+align-items:flex-end;
+
+justify-content:center;
+
+gap:26px;
+
+}
+
+/* ===========================
+CARD
+=========================== */
+
+.card{
+
+position:relative;
+
+width:180px;
+
+border-radius:18px;
+
+overflow:hidden;
+
+background:white;
+
+box-shadow:
+
+0 15px 45px rgba(0,0,0,.12);
+
+transition:.45s;
+
+will-change:transform;
+
+}
+
+.card:hover{
+
+transform:translateY(-12px) scale(1.03);
+
+box-shadow:
+
+0 30px 60px rgba(0,0,0,.18);
+
+}
+
+.card img{
+
+width:100%;
+
+height:100%;
+
+display:block;
+
+object-fit:cover;
+
+}
+
+/* Heights */
+
+.card1{
+
+height:200px;
+
+}
+
+.card2{
+
+/* height:420px; */
+height: 300px;
+
+}
+
+.card3{
+
+/* height:560px; */
+height: 400px;
+
+}
+
+/* ===========================
+PEDESTAL
+=========================== */
+
+.card::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+right:0;
+
+bottom:-90px;
+
+height:90px;
+
+background:#ece2d4;
+
+border-radius:0 0 12px 12px;
+
+box-shadow:
+
+0 10px 20px rgba(0,0,0,.08) inset;
+
+}
+
+/* ===========================
+IMAGE SHADOW
+=========================== */
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+left:10%;
+
+bottom:-25px;
+
+width:80%;
+
+height:18px;
+
+background:rgba(0,0,0,.18);
+
+filter:blur(14px);
+
+z-index:-1;
+
+}
+
+/* ===========================
+FLOATING
+=========================== */
+
+.card:nth-child(1){
+
+animation:float1 5s ease-in-out infinite;
+
+}
+
+.card:nth-child(2){
+
+animation:float2 6s ease-in-out infinite;
+
+}
+
+.card:nth-child(3){
+
+animation:float3 7s ease-in-out infinite;
+
+}
+
+@keyframes float1{
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+}
+
+@keyframes float2{
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+}
+
+@keyframes float3{
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:1100px){
+
+.container{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.content p{
+
+margin:auto auto 40px;
+
+}
+
+.buttons{
+
+justify-content:center;
+
+}
+
+.features{
+
+justify-content:center;
+
+}
+
+.gallery{
+
+margin-top:60px;
+
+height:520px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.gallery{
+
+gap:12px;
+
+height:350px;
+
+}
+
+.card{
+
+width:30%;
+
+}
+
+.card1{
+
+height:170px;
+
+}
+
+.card2{
+
+height:230px;
+
+}
+
+.card3{
+
+height:290px;
+
+}
+
+.features{
+
+gap:25px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.content h1{
+
+font-size:2.5rem;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+.btn{
+
+width:100%;
+
+}
+
+.features{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.gallery{
+
+height:260px;
+
+}
+
+.card1{
+
+height:130px;
+
+}
+
+.card2{
+
+height:170px;
+
+}
+
+.card3{
+
+height:220px;
+
+}
+
+}
+ </style>
+
+</head>
+
+
+
+<body>
+    <section class="cta">
+
+    <div class="container">
+
+        <!-- LEFT CONTENT -->
+
+        <div class="content">
+
+            <!-- <span class="tag">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M12 2L15 8L22 9L17 14L18 22L12 19L6 22L7 14L2 9L9 8L12 2"></path>
+                </svg>
+
+                PREMIUM RUGS
+            </span> -->
+
+            <h1>
+                Bring
+                <span>Luxury</span>
+                to
+                <br>
+                Every Corner
+            </h1>
+
+            <div class="line"></div>
+
+            <p>
+                Handcrafted rugs that blend timeless design,
+                comfort and unmatched quality for modern living.
+            </p>
+
+            <div class="buttons">
+
+                <!-- <a href="#" class="btn primary">
+
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path d="M6 6h15l-1.5 9h-13z"/>
+                        <circle cx="9" cy="20" r="1"/>
+                        <circle cx="18" cy="20" r="1"/>
+                        <path d="M6 6L5 3H2"/>
+                    </svg>
+
+                    Shop Collection
+
+                </a> -->
+
+                <a href="#" class="btn secondary">
+
+                 Start Your Project
+
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+                        <path d="M5 12h14"></path>
+                        <path d="M13 5l7 7-7 7"></path>
+
+                    </svg>
+
+                </a>
+
+            </div>
+
+            <!-- <div class="features">
+
+                <div class="feature">
+
+                    <svg fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+
+                        <path d="M12 21s-7-4.5-7-11a4 4 0 018-1 4 4 0 018 1c0 6.5-7 11-7 11z"/>
+
+                    </svg>
+
+                    <span>
+                        Handmade
+                    </span>
+
+                </div>
+
+                <div class="feature">
+
+                    <svg fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+
+                        <path d="M1 3h15v13H1z"/>
+                        <path d="M16 8h4l3 3v5h-7"/>
+                        <circle cx="5.5" cy="18.5" r="2"/>
+                        <circle cx="18.5" cy="18.5" r="2"/>
+
+                    </svg>
+
+                    <span>
+                        Fast Delivery
+                    </span>
+
+                </div>
+
+                <div class="feature">
+
+                    <svg fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+
+                        <path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6z"/>
+                        <path d="M9 12l2 2 4-4"/>
+
+                    </svg>
+
+                    <span>
+                        Easy Returns
+                    </span>
+
+                </div>
+
+            </div> -->
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="gallery">
+
+            <div class="card card1">
+
+                <img src="https://images.unsplash.com/photo-1660394585016-508f949df960?q=80&amp;w=644&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Persian Rug" loading="lazy">
+
+            </div>
+
+            <div class="card card2">
+
+                <img src="https://images.unsplash.com/photo-1594847915592-2a7ef568e2b6?q=80&amp;w=610&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Luxury Rug" loading="lazy">
+
+            </div>
+
+            <div class="card card3">
+
+                <img src="https://images.unsplash.com/photo-1774250100354-3067b5b748ad?q=80&amp;w=677&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Modern Rug" loading="lazy">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+ <script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+    
+</body>
+</html>
