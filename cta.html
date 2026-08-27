@@ -1,0 +1,314 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Handwoven Rugs — Call to Action</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+ <style>
+    
+     *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    } 
+
+    :root {
+      --bg-cream: #f8ede9;
+      /* --text-dark: #1a1a1a; */
+      --text-dark:#9b756d;
+    }
+ 
+    /* Hero Main Section */
+    .hero-section {
+      background-color: var(--bg-cream);
+      font-family: 'Cinzel', serif;
+      overflow-x: hidden;
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 4rem;
+    }
+
+    /* Text Container */
+    .text-container {
+      text-align: center;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      /* padding: 0 1rem; */
+    }
+
+    .main-title {
+     display: inline-block;        /* Zaroori hai vertical scale ke liye */
+      transform: scaleY(4); 
+      font-size: clamp(1.8rem, 4.5vw, 3.8rem);
+      font-weight: 300;
+      letter-spacing: 0.18em;
+      color: var(--text-dark);
+      margin-bottom: 0.8rem;
+      text-transform: uppercase;
+    }
+
+
+ .contact-link {
+    /* display: inline-flex;
+    align-items: center;
+    gap: 12px; */
+    margin-top: 3.5rem;
+    padding: 10px 15px;
+    background: #a27a75;
+    border-radius: 5px;
+    font-size: 14px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #ffffff !important;
+    font-weight: 700;
+    text-decoration: none;
+    
+    border: 1px solid var(--border);
+    
+}
+
+
+    .contact-link:hover {
+      opacity: 0.6;
+    }
+
+    /* Visual Section Wrapper */
+    .visual-wrapper {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    /* Boat - Floating on Top Wave Border */
+    .boat-container {
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 20;
+      width: clamp(65px, 8vw, 115px);
+      will-change: transform;
+      filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.4));
+      
+      /* Synchronized boat floating motion */
+      animation: boatBob 4s ease-in-out infinite alternate;
+    }
+
+    .boat-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Carpet Container with Wave Cut Top Border */
+    .carpet-ocean-container {
+      position: relative;
+      width: 100%;
+      height: 47vh;
+      overflow: hidden;
+      background-color: #0b2238;
+      
+      /* Top Border Animated SVG Wave Clip */
+      -webkit-clip-path: url(#wave-clip);
+      clip-path: url(#wave-clip);
+      will-change: clip-path;
+    }
+
+    /* Pinterest Carpet Image with INNER LIQUID WAVE FILTER */
+    .carpet-real-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      /* Inner Water Distortion Filter */
+      filter: url(#water-wave-filter);
+      will-change: filter;
+    }
+
+    /* Boat Floating Motion */
+    @keyframes boatBob {
+      0% {
+        transform: translate(-50%, 0px) rotate(-2deg);
+      }
+      50% {
+        transform: translate(-50%, -14px) rotate(2.5deg);
+      }
+      100% {
+        transform: translate(-50%, 5px) rotate(-1.5deg);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-section { padding-top: 3rem; }
+      .boat-container { top: -55px; }
+      .carpet-ocean-container { height: 40vh; }
+    }
+   
+@media (prefers-reduced-motion: reduce) {
+  .carpet-real-img {
+    filter: none !important; /* Heavy liquid distortion filter band ho jayega */
+  }
+  .boat-container {
+    animation: none !important; /* Boat floating animation ruk jayegi */
+  }
+}
+
+ </style>
+</head>
+<body>
+ 
+   <section class="hero-section">
+    <!-- Header Text -->
+    <div class="text-container">
+      <h1 class="main-title">EVERY THREAD TELLS THE STORY</h1>
+      <button href="#contact" class="contact-link">Contact us</button>
+    </div>
+
+    <!-- Visual Layer -->
+    <div class="visual-wrapper">
+      
+      <!-- Vector Boat -->
+      <div class="boat-container" id="boat">
+        <svg class="boat-svg" viewBox="0 0 100 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 0 C75 50 80 150 50 220 C20 150 25 50 50 0 Z" fill="#8B4513" stroke="#5C2E0B" stroke-width="3"/>
+          <path d="M50 8 C70 52 74 148 50 212 C30 148 34 52 50 8 Z" fill="#A0522D"/>
+          <rect x="33" y="60" width="34" height="6" rx="2" fill="#5C2E0B"/>
+          <rect x="30" y="110" width="40" height="8" rx="2" fill="#5C2E0B"/>
+          <rect x="33" y="160" width="34" height="6" rx="2" fill="#5C2E0B"/>
+          <circle cx="50" cy="114" r="9" fill="#E5C158"/>
+          <circle cx="50" cy="114" r="5" fill="#C0392B"/>
+          <line x1="10" y1="120" x2="90" y2="108" stroke="#3D1E06" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+ <!-- src="./images/Gemini_Generated_Image_n6a32mn6a32mn6a3.png "  -->
+  <!-- src=" https://i.pinimg.com/736x/c4/56/a5/c456a5fd3c2a6f5da073b71b8d3f41cf.jpg "  -->
+      <!-- Carpet Container -->
+      <div class="carpet-ocean-container">
+        <img  src=" https://i.pinimg.com/736x/d0/0a/41/d00a41a7834189e04b2070da4221b299.jpg"
+                  alt="Persian Carpet" 
+          class="carpet-real-img"
+        />
+      </div>
+
+    </div>
+  </section>
+
+
+    <svg width="0" height="0">
+    <defs>
+      <clipPath id="wave-clip" clipPathUnits="objectBoundingBox">
+        <path d="M0,0.1 C0.2,0.18 0.4,0.02 0.6,0.12 C0.8,0.2 0.9,0.04 1,0.08 L1,1 L0,1 Z">
+          <animate 
+            attributeName="d" 
+            dur="6s" 
+            repeatCount="indefinite"
+            values="
+              M0,0.1 C0.2,0.18 0.4,0.02 0.6,0.12 C0.8,0.2 0.9,0.04 1,0.08 L1,1 L0,1 Z;
+              M0,0.05 C0.25,0.01 0.45,0.16 0.65,0.06 C0.85,-0.02 0.95,0.12 1,0.04 L1,1 L0,1 Z;
+              M0,0.12 C0.18,0.04 0.38,0.14 0.58,0.02 C0.78,-0.04 0.88,0.16 1,0.1 L1,1 L0,1 Z;
+              M0,0.1 C0.2,0.18 0.4,0.02 0.6,0.12 C0.8,0.2 0.9,0.04 1,0.08 L1,1 L0,1 Z
+            "
+          />
+        </path>
+      </clipPath>
+
+      <!-- 2. Inner Image Water Wave Ripple Filter -->
+      <filter id="water-wave-filter">
+        <feTurbulence 
+          type="fractalNoise" 
+          baseFrequency="0.01 0.02" 
+          numOctaves="2" 
+          result="turbulence" 
+          id="fe-turbulence">
+        </feTurbulence>
+        <feDisplacementMap 
+          in2="turbulence" 
+          in="SourceGraphic" 
+          scale="12" 
+          xChannelSelector="R" 
+          yChannelSelector="G">
+        </feDisplacementMap>
+      </filter>
+    </defs>
+  </svg>
+<script>
+    
+  document.addEventListener('DOMContentLoaded', () => {
+    const boat = document.getElementById('boat');
+    const turbulence = document.getElementById('fe-turbulence');
+    const heroSection = document.querySelector('.hero-section');
+    
+    let ticking = false;
+    let step = 0;
+    let isVisible = false; // Section screen par hai ya nahi tracked yahan hoga
+
+    // 1. Intersection Observer: Screen par aane par hi animation chalayega
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        isVisible = entry.isIntersecting;
+        if (isVisible) {
+          // console.log("🟢 Section screen par AAGAYA - Animation Started!");
+          animateWaterWaves(); // Jab visible ho tabhi loop start ho
+        }
+        else{
+          // console.log("🔴 Section screen se CHALA GAYA - Animation Paused!");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    if (heroSection) {
+      observer.observe(heroSection);
+    }
+
+    // 2. Inner Image Liquid Motion Shader Loop (Optimized)
+    function animateWaterWaves() {
+      if (!isVisible) return; // Screen se bahar hote hi animation ruk jayegi (CPU Free)
+
+      step += 0.006;
+      const freqX = 0.01 + Math.sin(step) * 0.003;
+      const freqY = 0.02 + Math.cos(step) * 0.004;
+      
+      turbulence.setAttribute('baseFrequency', `${freqX} ${freqY}`);
+      requestAnimationFrame(animateWaterWaves);
+    }
+
+    // 3. Boat Scroll Motion Downwards
+    function updateBoatOnScroll() {
+      if (!isVisible) return;
+
+      const scrollY = window.scrollY;
+      const boatY = scrollY * 0.35;
+      const boatX = Math.sin(scrollY * 0.015) * 20;
+
+      boat.style.transform = `translate(calc(-50% + ${boatX}px), ${boatY}px)`;
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateBoatOnScroll);
+        ticking = true;
+      }
+    }, { passive: true });
+  });
+ 
+</script>
+</body>
+</html>
